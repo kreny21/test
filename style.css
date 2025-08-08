@@ -1,0 +1,9 @@
+li {
+    padding: 10px;
+}
+ul{
+    display: flex;
+}
+main {
+    justify-items: center;
+}
