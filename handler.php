@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         require_once 'config.php';
         require_once 'utils.php';
         try{
-            if(DBUtils::is_user_exist($db,$client_id)){
+            if(DBUtils::is_user_or_quiz_exist($db,$quiz_id,$client_id)){
                 if (DBUtils::is_user_reviewed($db,$client_id, $quiz_id)) {
                     http_response_code(400);
                     die('Вы уже оставляли отзыв ранее');
