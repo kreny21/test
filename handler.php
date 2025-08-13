@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                     exit;
                 }
                 
-                $grade = $_POST['grade'];
+                $grade = $_POST['grade'] ?? null;
                 $comment = $_POST['comment'] ?? null;
                 
                 if(in_array($grade, ['1','2','3','4','5'])) {

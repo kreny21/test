@@ -5,7 +5,7 @@
     <?php $client_id = filter_var($_GET['client_id'] ?? null,FILTER_VALIDATE_INT);
     $quiz_id = filter_var($_GET['quiz_id'] ?? null,FILTER_VALIDATE_INT);
     require_once 'DBUtils.php';
-    if($client_id && DBUtils::is_user_or_quiz_exist($quiz_id,$client_id)):
+    if(DBUtils::is_user_or_quiz_exist($quiz_id,$client_id)):
     ?>
     <h1>Оцените качество обслуживания</h1>
     <form action = 'handler.php?client_id=<?php echo $client_id ?>&quiz_id=<?php echo $quiz_id ?>' method = 'POST'>
